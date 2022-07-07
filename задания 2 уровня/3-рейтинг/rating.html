@@ -58,9 +58,8 @@
         let stars = document.getElementsByClassName('fa-star');
 
         for (let i = 0; i < stars.length; i++) {
-            stars[i].addEventListener('mouseover', event => {
-                event.target.classList.add(goldenClass);
-                for (let j = 0; j < i; j++) {
+            stars[i].addEventListener('mouseover', () => {
+                for (let j = 0; j <= i; j++) {
                     if (!stars[j].classList.contains(goldenClass)) {
                         stars[j].classList.add(goldenClass);
                     }
